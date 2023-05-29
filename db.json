@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "title": "Fjallraven - update",
+      "price": 0,
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      "id": 1
+    },
+    {
+      "title": "sản phẩm 123",
+      "price": 123,
+      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+      "id": 3
+    },
+    {
+      "title": "John Hardy Women's",
+      "price": 12,
+      "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+      "id": 4
+    },
+    {
+      "title": "updte",
+      "price": 1111,
+      "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_.jpg",
+      "id": 5
+    }
+  ]
+}
