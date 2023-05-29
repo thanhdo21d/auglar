@@ -1,0 +1,32 @@
+<div class="container m-5">
+  <div class="my-5">
+    <a class="d-inline-block" routerLink="/product-add"><button class="btn btn-primary">Add</button></a>
+  </div>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">Price</th>
+          <th scope="col">Image</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <th scope="row">{{product.id}}</th>
+          <td>{{product.title}}</td>
+          <td>{{product.price}}</td>
+          <td>
+            <img [src]="product.image" alt="">
+          </td>
+          <td>
+            <a routerLink="product-edit/{{product.id}}"><button class="btn btn-primary">Edit</button></a>
+            <button class="btn btn-danger" (click)="deleteProduct(product.id!)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
