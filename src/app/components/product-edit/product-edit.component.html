@@ -1,0 +1,36 @@
+<div class="container">
+  <form [formGroup]="editForm" (submit)="handleSubmitFormEdit()">
+    <h1 class="my-5 text-center">Edit Product</h1>
+    <div class="form-group mb-4">
+      <label for="exampleInputEmail1">Title</label>
+      <input type="text" class="form-control" formControlName="title" id="exampleInputEmail1" placeholder="Enter title">
+      <div *ngIf="editForm.get('title')?.invalid && (editForm.get('title')?.dirty || editForm.get('title')?.touched)">
+        <p *ngIf="editForm.get('title')?.errors?.['required']" class="text-danger">
+          Title is required.
+        </p>
+        <p *ngIf="editForm.get('title')?.errors?.['minlength']" class="text-danger">
+          Title must be at least 4 characters long.
+        </p>
+      </div>
+    </div>
+    <div class="form-group mb-4">
+      <label for="exampleInputPassword1">Price</label>
+      <input type="number" class="form-control" formControlName="price" id="exampleInputPassword1" placeholder="Price">
+      <div *ngIf="editForm.get('price')?.invalid && (editForm.get('price')?.dirty || editForm.get('price')?.touched)">
+        <p *ngIf="editForm.get('price')?.errors?.['required']" class="text-danger">
+          Price is required.
+        </p>
+      </div>
+    </div>
+    <div class="form-group mb-4">
+      <label for="exampleInputPassword1">Image</label>
+      <input type="text" class="form-control" formControlName="image" id="exampleInputPassword1" placeholder="Image">
+      <div *ngIf="editForm.get('image')?.invalid && (editForm.get('image')?.dirty || editForm.get('image')?.touched)">
+        <p *ngIf="editForm.get('image')?.errors?.['required']" class="text-danger">
+          Image is required.
+        </p>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary w-100">Submit</button>
+  </form>
+</div>
